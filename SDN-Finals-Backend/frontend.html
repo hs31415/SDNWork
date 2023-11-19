@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>调用后端API</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1>调用后端API</h1>
+
+  <button onclick="sendPackages()">发送数据包</button>
+  <button onclick="startSniffing()">开始抓包</button>
+  <button onclick="clearSketch()">清空数据</button>
+  <button onclick="getSketchValue()">获取数据包数量</button>
+
+  <script>
+    function sendPackages() {
+      fetch('http://127.0.0.1:9876/send')
+        .then(response => {
+          console.log('Sent packages successfully');
+        })
+        .catch(error => {
+          console.error('Error sending packages:', error);
+        });
+    }
+
+    function startSniffing() {
+      fetch('http://127.0.0.1:9876/sniff')
+        .then(response => {
+          console.log('Started sniffing packets');
+        })
+        .catch(error => {
+          console.error('Error starting sniffing:', error);
+        });
+    }
+
+    function clearSketch() {
+      fetch('http://127.0.0.1:9876/clear')
+        .then(response => {
+          console.log('Cleared sketch successfully');
+        })
+        .catch(error => {
+          console.error('Error clearing sketch:', error);
+        });
+    }
+
+    function getSketchValue() {
+      fetch('http://127.0.0.1:9876/sketch', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          src: '10.0.0.1',
+          dst: '10.0.0.2',
+          sport: '3977',
+          dport: '3979'
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Sketch value:', data);
+      })
+      .catch(error => {
+        console.error('Error getting sketch value:', error);
+      });
+    }
+  </script>
+</body>
+</html>
