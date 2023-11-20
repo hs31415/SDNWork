@@ -21,7 +21,7 @@ app.add_middleware(
 tableSize = 1000
 hashFuncCount = 5
 count = 100
-address = ["10.0.0.1", "10.0.0.2", "10.0.0.3"]
+address = ["10.0.0.1", "10.0.0.2", "10.0.0.3","10.0.0.4","10.0.0.5","10.0.0.6","10.0.0.7","10.0.0.8"]
 port = {
     "10.0.0.1": {
         "sport": 1234,
@@ -32,6 +32,26 @@ port = {
         "dport": 1234
     },
     "10.0.0.3": {
+        "sport": 1234,
+        "dport": 1234
+    },
+    "10.0.0.4": {
+        "sport": 1234,
+        "dport": 1234
+    },
+    "10.0.0.5": {
+        "sport": 1234,
+        "dport": 1234
+    },
+    "10.0.0.6": {
+        "sport": 1234,
+        "dport": 1234
+    },
+    "10.0.0.7": {
+        "sport": 1234,
+        "dport": 1234
+    },
+    "10.0.0.8": {
         "sport": 1234,
         "dport": 1234
     }
@@ -62,10 +82,10 @@ def Callback(packet):
 async def Send():
     packets = []
     for _ in range(0, count):
-        i = random.randint(0, 2)
-        j = random.randint(0, 2)
+        i = random.randint(0, 7)
+        j = random.randint(0, 7)
         while i == j:
-            j = random.randint(0, 2)
+            j = random.randint(0, 7)
 
         package = IP(src=address[i], dst=address[j]) / TCP(sport=port[address[i]]["sport"],
                                                            dport=port[address[j]]["dport"])

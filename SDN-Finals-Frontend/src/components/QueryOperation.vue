@@ -25,13 +25,70 @@ export default{
       });
     },
     getAllSketachValue(){
-      this.sketchValues = [];
+      this.sketchValues = [];//这里可以写循环，但是老懒狗了
       this.getSketchValue('10.0.0.1', '10.0.0.2', '1234', '1234')
       this.getSketchValue('10.0.0.1', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.8', '1234', '1234')
+
       this.getSketchValue('10.0.0.2', '10.0.0.1', '1234', '1234')
       this.getSketchValue('10.0.0.2', '10.0.0.3', '1234', '1234')
-      this.getSketchValue('10.0.0.3', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.2', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.2', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.2', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.2', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.1', '10.0.0.8', '1234', '1234')
+      
       this.getSketchValue('10.0.0.3', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.3', '10.0.0.8', '1234', '1234')
+
+      this.getSketchValue('10.0.0.4', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.4', '10.0.0.8', '1234', '1234')
+
+      this.getSketchValue('10.0.0.5', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.5', '10.0.0.8', '1234', '1234')
+
+      this.getSketchValue('10.0.0.6', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.6', '10.0.0.8', '1234', '1234')
+
+      this.getSketchValue('10.0.0.7', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.1', '1234', '1234')
+      this.getSketchValue('10.0.0.7', '10.0.0.8', '1234', '1234')
+
+      this.getSketchValue('10.0.0.8', '10.0.0.2', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.3', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.4', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.5', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.6', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.7', '1234', '1234')
+      this.getSketchValue('10.0.0.8', '10.0.0.1', '1234', '1234')
     }
   },
   computed: {
